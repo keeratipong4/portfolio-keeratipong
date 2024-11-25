@@ -36,7 +36,7 @@ function Intro() {
           </motion.div>
 
           <motion.span
-            className="text-6xl absolute bottom-8 right-12"
+            className="text-6xl absolute bottom-8 left-12"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -58,7 +58,7 @@ function Intro() {
         triggerOnce={true}>
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
           <span className="font-medium !leading-[1.5] ">
-            Hi, my name is Keeratipong. But everybody calls me Chee.
+            Hi, my name is Keeratipong. I&apos;m a front end developer 😄
           </span>{" "}
           <p className="text-[14px]">
             Resonance is a full-service creative studio creating beautiful
