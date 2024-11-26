@@ -57,9 +57,12 @@ function Intro() {
         damping={1e-1}
         triggerOnce={true}>
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
-          <span className="font-medium !leading-[1.5] ">
-            Hi, my name is Keeratipong. I&apos;m a front end developer 😄
-          </span>{" "}
+          <span className="font-medium !leading-[1.5]">
+            <span className="text-xl sm:text-2xl">Hi, my name is </span>
+            Keeratipong.
+            <br />
+            I&apos;m a front end developer 😄
+          </span>
           <p className="text-[14px]">
             Resonance is a full-service creative studio creating beautiful
             digital experiences and products.
