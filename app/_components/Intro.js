@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+// import portraitImage from "@/public/Keeratipong-portrait.png";
+import portraitImage from "@/public/boy.png";
 import React from "react";
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
@@ -19,7 +21,7 @@ function Intro() {
       id="home"
       className="mb-28 max-w-[75rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
-        <div className="relative">
+        <div className="relative ">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -30,12 +32,13 @@ function Intro() {
               duration: 0.2,
             }}>
             <Image
-              src="/boy.png"
+              src={portraitImage}
               width="480"
               height="480"
               alt="portrait"
-              quality="100"
+              quality={80}
               priority={true}
+              placeholder="blur"
               className="rounded-full object-cover shadow-xl"
             />
           </motion.div>
@@ -102,7 +105,7 @@ function Intro() {
 
         <a
           className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href=""
+          href="https://github.com/keeratipong4"
           target="_blank">
           <FaGithubSquare />
         </a>
