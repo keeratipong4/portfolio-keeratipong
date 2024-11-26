@@ -7,10 +7,15 @@ import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { Mail } from "lucide-react";
+import { useSectionInView } from "@/app/_lib/useInView";
+import { useActiveSectionContext } from "../_containers/active-section";
+
 function Intro() {
+  const { ref } = useSectionInView("#home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section
-      //   ref={ref}
+      ref={ref}
       id="home"
       className="mb-28 max-w-[75rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
