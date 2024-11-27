@@ -1,5 +1,5 @@
 import HamburgerMenu from "./HamburgerMenu";
-import Header from "./header";
+import Header from "./Header";
 import { links } from "@/app/_lib/data";
 
 export default function Navbar() {

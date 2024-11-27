@@ -69,7 +69,7 @@ function Intro() {
             <span className="text-xl sm:text-2xl">Hi, my name is </span>
             Keeratipong.
             <br />
-            I&apos;m a front end developer 😄
+            I&apos;m a web developer 😄
           </span>
           <p className="text-[14px]">
             Resonance is a full-service creative studio creating beautiful
@@ -88,11 +88,10 @@ function Intro() {
         <Link
           href="#contact"
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 dark:bg-white/10 active:scale-105 transition"
-          //   onClick={() => {
-          //     setActiveSection("#contact");
-          //     setTimeOfLastClick(Date.now());
-          //   }}
-        >
+          onClick={() => {
+            setActiveSection("#contact");
+            setTimeOfLastClick(Date.now());
+          }}>
           Connect <Mail color={"#9ca3af"} />
         </Link>
 
