@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-// import SectionHeading from "./Section-heading";
+import SectionHeading from "./SectionHeading";
 import { Fade } from "react-awesome-reveal";
 import { useSectionInView } from "@/hooks/useInView";
 
@@ -24,10 +24,7 @@ export default function About() {
           cascade
           damping={1e-1}
           triggerOnce={true}>
-          {/* <SectionHeading>About Me</SectionHeading> */}
-          <h2 className="text-3xl font-medium capitalize mb-8 text-center">
-            About Me
-          </h2>
+          <SectionHeading>About Me</SectionHeading>
         </Fade>
 
         <div className="grid xl:grid-cols-2 lg:text-start">

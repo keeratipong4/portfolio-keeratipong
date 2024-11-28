@@ -1,6 +1,6 @@
 // import React from "react";
 import ActiveSectionContextProvider from "./active-section";
-import ThemeContextProvider from "./themeContext";
+import ThemeContextProvider from "./ThemeContext";
 // import { Analytics } from "@vercel/analytics/react";
 // import { Toaster } from "react-hot-toast";
 // import dynamic from "next/dynamic";
