@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 // import SectionHeading from "./Section-heading";
 import { Fade } from "react-awesome-reveal";
-import { useSectionInView } from "@/app/_lib/useInView";
+import { useSectionInView } from "@/hooks/useInView";
 
 export default function About() {
   const { ref } = useSectionInView("#about");

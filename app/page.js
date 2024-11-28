@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Intro from "./_components/Intro";
-import About from "./_components/About";
+import Intro from "@/components/Intro";
+import About from "@/components/About";
 
 export default function Home() {
   return (

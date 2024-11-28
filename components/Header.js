@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { useActiveSectionContext } from "@/app/_containers/active-section";
+import { useActiveSectionContext } from "@/contexts/active-section";
 
 export default function Header({ links }) {
   const { activeSection, setActiveSection, setTimeOfLastClick } =

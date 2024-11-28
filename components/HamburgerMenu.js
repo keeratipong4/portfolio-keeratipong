@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import NextLink from "next/link";
-import { useActiveSectionContext } from "@/app/_containers/active-section";
+import { useActiveSectionContext } from "@/contexts/active-section";
 import { Menu } from "lucide-react";
 import Hamburger from "hamburger-react";
 

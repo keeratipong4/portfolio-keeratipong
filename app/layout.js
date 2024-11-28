@@ -1,8 +1,8 @@
 import { Sora } from "next/font/google";
 import "./globals.css";
-import Providers from "./_containers/Provider";
-import Navbar from "./_components/Navbar";
-import ThemeSwitch from "./_components/ThemeSwitch";
+import Providers from "@/contexts/Provider";
+import Navbar from "@/components/Navbar";
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 const sora = Sora({
   subsets: ["latin"],

@@ -9,8 +9,8 @@ import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { Mail } from "lucide-react";
-import { useSectionInView } from "@/app/_lib/useInView";
-import { useActiveSectionContext } from "../_containers/active-section";
+import { useSectionInView } from "@/hooks/useInView";
+import { useActiveSectionContext } from "../contexts/active-section";
 
 function Intro() {
   const { ref } = useSectionInView("#home", 0.5);
