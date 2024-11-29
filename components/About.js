@@ -4,7 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { Fade } from "react-awesome-reveal";
+import { ImFacebook2 } from "react-icons/im";
+import { IoLogoYoutube } from "react-icons/io";
+import { FaSquareInstagram } from "react-icons/fa6";
 import { useSectionInView } from "@/hooks/useInView";
+import SocialLinks from "./SocialLinks";
 
 export default function About() {
   const { ref } = useSectionInView("#about");
@@ -76,6 +80,30 @@ export default function About() {
                     social media, and I used to gain huge audiences on Youtube.
                     😄🎉
                   </p>
+                </Fade>
+                <Fade
+                  direction="up"
+                  delay={800}
+                  cascade
+                  damping={1e-1}
+                  triggerOnce={true}>
+                  <h3 className="font-bold mt-6">My social media account</h3>
+                  <Fade
+                    direction="up"
+                    delay={1000}
+                    cascade
+                    damping={1e-1}
+                    triggerOnce={true}>
+                    <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
+                      checkout hundred of vidoes i made on my instagram account
+                    </p>
+                  </Fade>
+                  <SocialLinks />
+                  {/* <div className="flex flex-row justify-items-center gap-3 mx-auto ">
+                    <ImFacebook2 />
+                    <FaSquareInstagram />
+                    <IoLogoYoutube />
+                  </div> */}
                 </Fade>
               </div>
             </div>
