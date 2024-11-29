@@ -11,7 +11,7 @@ const sora = Sora({
 });
 
 export const metadata = {
-  title: "Keeratipong portfolio",
+  title: "Keeratipong | Portfolio",
   description: "Web developer base in Bangkok",
 };
 

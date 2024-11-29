@@ -27,10 +27,10 @@ export default function About() {
           <SectionHeading>About Me</SectionHeading>
         </Fade>
 
-        <div className="grid xl:grid-cols-2 lg:text-start">
+        <div className="grid xl:grid-cols-2 lg:text-start mt-0">
           <div className="flex-1">
             {/* Content */}
-            <div className="text-lg mt-12 xl:mt-3">
+            <div className="text-lg">
               <div className="flex justify-start flex-col">
                 <Fade
                   direction="up"
@@ -38,7 +38,7 @@ export default function About() {
                   cascade
                   damping={1e-1}
                   triggerOnce={true}>
-                  <h3 className="font-bold mt-6">Our Mission</h3>
+                  <h3 className="font-bold">My story</h3>
                 </Fade>
                 <Fade
                   direction="up"
@@ -47,10 +47,12 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}>
                   <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
-                    We believe that a website is the foundation of a successful
-                    online presence, and our goal is to help businesses
-                    establish a strong digital presence. Our process begins with
-                    understanding your business goals.
+                    Even though I graduated with a degree in computer
+                    engineering in 2011, most of my work in the last 13 year
+                    wasn&apos;t related to web developemnt at all. Until 2023 I
+                    started interested in becoming a full time employee. That
+                    was why I took a coding bootcamp and my web developemnt
+                    journey began in in Mar 2023.
                   </p>
                 </Fade>
                 <Fade
@@ -59,7 +61,7 @@ export default function About() {
                   cascade
                   damping={1e-1}
                   triggerOnce={true}>
-                  <h3 className="font-bold mt-6">Our Vision</h3>
+                  <h3 className="font-bold mt-6">My personality</h3>
                 </Fade>
                 <Fade
                   direction="up"
@@ -68,10 +70,11 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}>
                   <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
-                    We then use this information to create a custom website that
-                    not only reflects your brand but also helps you achieve your
-                    business objectives. From responsive design to intuitive
-                    navigation, we focus on every detail.
+                    Besides practicing coding skills, I commit myself to
+                    practice weight training 5 days a week over the last 11
+                    years. Sometimes I enjoy making videos and share my story on
+                    social media, and I used to gain huge audiences on Youtube.
+                    😄🎉
                   </p>
                 </Fade>
               </div>
