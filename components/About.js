@@ -11,7 +11,7 @@ export default function About() {
 
   return (
     <motion.section
-      className="max-w-[45rem] text-center mt-32 leading-8 mb-28 sm:mb-40 scroll-mt-28"
+      className="max-w-[55rem] text-center mt-32 leading-8 mb-20 sm:mb-28 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -87,15 +87,16 @@ export default function About() {
               cascade
               damping={1e-1}
               triggerOnce={true}>
-              <Image
-                src="/about.png"
-                width="600"
-                height="600"
-                alt="portrait"
-                quality="100"
-                priority={true}
-                className="rounded-full mt-8 object-cover"
-              />
+              <iframe
+                // width="560"
+                // height="315"
+                src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
+                title="YouTube video player"
+                frameborder="3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                className="xl:min-w-[40vw] xl:min-h-[20vw] lg:min-w-[60vw] lg:min-h-[35vw] sm:min-w-[80vw] sm:min-h-[50vw] mx-auto mt-10 px-8"></iframe>
             </Fade>
           </div>
         </div>
