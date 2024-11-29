@@ -78,24 +78,24 @@ function Intro() {
         }}>
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white text-xs sm:text-sm xs:px-7 xs:py-3 px-4 py-1 flex items-center gap-2 rounded-full border border-slate-600 outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("#contact");
             setTimeOfLastClick(Date.now());
           }}>
           Contact me
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowRight className="hidden xs:block opacity-70 group-hover:translate-x-1 transition" />
           <Mail
             color={"#9ca3af"}
-            className="opacity-70 group-hover:-translate-x-1 transition"
+            className="hidden xs:block opacity-70 group-hover:-translate-x-1 transition"
           />
         </Link>
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-white text-xs sm:text-sm xs:px-7 xs:py-3 px-4 py-1 flex items-center gap-2 rounded-full border border-slate-600 outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
           href="/CV.pdf"
           download>
           Download CV
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <HiDownload className="hidden xs:block opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a
