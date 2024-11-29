@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 // import portraitImage from "@/public/Keeratipong-portrait.png";
-import portraitImage from "@/public/keeratipong-portrait-original.jpg";
+import portraitImage from "@/public/keeratipong-portrait-ori.jpg";
 // import portraitImage from "@/public/boy.png";
 import React from "react";
 import { motion } from "framer-motion";
