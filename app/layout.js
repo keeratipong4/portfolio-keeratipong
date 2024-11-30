@@ -15,7 +15,7 @@ const sora = Sora({
 //   description: "Web developer base in Bangkok",
 // };
 export const metadata = {
-  title: "Keeratipong - Web Developer",
+  title: "Keeratipong | Web Developer",
   description:
     "Web developer based in Bangkok, Thailand. Fluent in Thai, English, and Chinese.",
   openGraph: {
