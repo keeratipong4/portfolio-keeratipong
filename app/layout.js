@@ -10,9 +10,38 @@ const sora = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
+// export const metadata = {
+//   title: "Keeratipong | Portfolio",
+//   description: "Web developer base in Bangkok",
+// };
 export const metadata = {
-  title: "Keeratipong | Portfolio",
-  description: "Web developer base in Bangkok",
+  title: "Keeratipong - Web Developer",
+  description:
+    "Web developer based in Bangkok, Thailand. Fluent in Thai, English, and Chinese.",
+  openGraph: {
+    title: "Keeratipong - Web Developer",
+    description:
+      "Web developer based in Bangkok, Thailand. Fluent in Thai, English, and Chinese.",
+    url: "https://keeratipong.com",
+    siteName: "Keeratipong",
+    images: [
+      {
+        url: "/keeratipong-portrait-ori.jpg", // Replace with your actual OG image path
+        width: 1200,
+        height: 630,
+        alt: "Keeratipong - Web Developer Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Keeratipong - Web Developer",
+    description:
+      "Web developer based in Bangkok, Thailand. Fluent in Thai, English, and Chinese.",
+    images: ["/keeratipong-portrait-ori.jpg"], // Replace with your actual OG image path
+  },
 };
 
 export default function RootLayout({ children }) {
