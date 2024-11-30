@@ -92,7 +92,7 @@ function Intro() {
         </Link>
         <a
           className="group bg-white text-xs sm:text-sm xs:px-7 xs:py-3 px-4 py-1 flex items-center gap-2 rounded-full border border-slate-600 outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          href="/resume-Keeratipong.pdf"
           download>
           Download CV
           <HiDownload className="hidden xs:block opacity-60 group-hover:translate-y-1 transition" />

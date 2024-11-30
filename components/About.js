@@ -120,10 +120,10 @@ export default function About() {
                 // height="315"
                 src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
                 title="YouTube video player"
-                frameborder="3"
+                frameBorder="3"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className="xl:min-w-[40vw] xl:min-h-[20vw] lg:min-w-[60vw] lg:min-h-[35vw] sm:min-w-[80vw] sm:min-h-[50vw] mx-auto mt-10 px-8"></iframe>
             </Fade>
           </div>
