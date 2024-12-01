@@ -4,9 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { Fade } from "react-awesome-reveal";
-import { ImFacebook2 } from "react-icons/im";
-import { IoLogoYoutube } from "react-icons/io";
-import { FaSquareInstagram } from "react-icons/fa6";
 import { useSectionInView } from "@/hooks/useInView";
 import SocialLinks from "./SocialLinks";
 
@@ -15,33 +12,36 @@ export default function About() {
 
   return (
     <motion.section
-      className="max-w-[55rem] text-center mt-14 leading-8 mb-20 sm:mb-28 scroll-mt-28"
+      className="mb-20 mt-14 max-w-[55rem] scroll-mt-28 text-center leading-8 sm:mb-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       ref={ref}
-      id="about">
+      id="about"
+    >
       <div className="container mx-auto">
         <Fade
           direction="up"
           delay={400}
           cascade
           damping={1e-1}
-          triggerOnce={true}>
+          triggerOnce={true}
+        >
           <SectionHeading>About Me</SectionHeading>
         </Fade>
 
-        <div className="grid xl:grid-cols-2 lg:text-start mt-0">
+        <div className="mt-0 grid lg:text-start xl:grid-cols-2">
           <div className="flex-1">
             {/* Content */}
             <div className="text-lg">
-              <div className="flex justify-start flex-col">
+              <div className="flex flex-col justify-start">
                 <Fade
                   direction="up"
                   delay={400}
                   cascade
                   damping={1e-1}
-                  triggerOnce={true}>
+                  triggerOnce={true}
+                >
                   <h3 className="font-bold">My story</h3>
                 </Fade>
                 <Fade
@@ -49,8 +49,9 @@ export default function About() {
                   delay={600}
                   cascade
                   damping={1e-1}
-                  triggerOnce={true}>
-                  <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
+                  triggerOnce={true}
+                >
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
                     Even though I graduated with a degree in computer
                     engineering in 2011, most of my work in the last 13 year
                     wasn&apos;t related to web developemnt at all. Until 2023 I
@@ -64,16 +65,18 @@ export default function About() {
                   delay={800}
                   cascade
                   damping={1e-1}
-                  triggerOnce={true}>
-                  <h3 className="font-bold mt-6">My personality</h3>
+                  triggerOnce={true}
+                >
+                  <h3 className="mt-6 font-bold">My personality</h3>
                 </Fade>
                 <Fade
                   direction="up"
                   delay={1000}
                   cascade
                   damping={1e-1}
-                  triggerOnce={true}>
-                  <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
+                  triggerOnce={true}
+                >
+                  <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
                     Besides practicing coding skills, I commit myself to
                     practice weight training 5 days a week over the last 11
                     years. Sometimes I enjoy making videos and share my story on
@@ -86,24 +89,21 @@ export default function About() {
                   delay={800}
                   cascade
                   damping={1e-1}
-                  triggerOnce={true}>
-                  <h3 className="font-bold mt-6">My social media account</h3>
+                  triggerOnce={true}
+                >
+                  <h3 className="mt-6 font-bold">My social media account</h3>
                   <Fade
                     direction="up"
                     delay={1000}
                     cascade
                     damping={1e-1}
-                    triggerOnce={true}>
-                    <p className="mt-2 leading-relaxed text-sm text-gray-700 dark:text-white/70">
+                    triggerOnce={true}
+                  >
+                    <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
                       checkout hundred of vidoes i made on my instagram account
                     </p>
                   </Fade>
                   <SocialLinks />
-                  {/* <div className="flex flex-row justify-items-center gap-3 mx-auto ">
-                    <ImFacebook2 />
-                    <FaSquareInstagram />
-                    <IoLogoYoutube />
-                  </div> */}
                 </Fade>
               </div>
             </div>
@@ -114,7 +114,8 @@ export default function About() {
               delay={600}
               cascade
               damping={1e-1}
-              triggerOnce={true}>
+              triggerOnce={true}
+            >
               <iframe
                 // width="560"
                 // height="315"
@@ -124,7 +125,8 @@ export default function About() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                className="xl:min-w-[40vw] xl:min-h-[20vw] lg:min-w-[60vw] lg:min-h-[35vw] sm:min-w-[80vw] sm:min-h-[50vw] mx-auto mt-10 px-8"></iframe>
+                className="mx-auto mt-10 px-8 sm:min-h-[50vw] sm:min-w-[80vw] lg:min-h-[35vw] lg:min-w-[60vw] xl:min-h-[20vw] xl:min-w-[40vw]"
+              ></iframe>
             </Fade>
           </div>
         </div>

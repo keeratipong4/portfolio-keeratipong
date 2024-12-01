@@ -19,6 +19,7 @@ import {
   SiSocketdotio,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+import ReactQueryLogo from "./ReacyQueryLogo";
 import SectionHeading from "./SectionHeading";
 
 const iconMap = {
@@ -29,7 +30,7 @@ const iconMap = {
   "Next.js": SiNextdotjs,
   Redux: SiRedux,
   "Redux Toolkit": SiRedux,
-  "React Query": TbBrandReactNative,
+  "React Query": ReactQueryLogo,
   Git: SiGit,
   Tailwind: SiTailwindcss,
   "Framer Motion": SiFramer,
@@ -49,7 +50,8 @@ const colorMap = {
   "Next.js": "text-[#000000] dark:text-white",
   Redux: "text-[#764ABC]",
   "Redux Toolkit": "text-[#764ABC]",
-  "React Query": "text-[#FF4154]",
+  "React Query": "",
+  // "React Query": "text-[#FF4154]",
   Git: "text-[#F05032]",
   Tailwind: "text-[#06B6D4]",
   "Framer Motion": "text-[#0055FF]",
