@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 import { FaDisplay } from "react-icons/fa6";
+import { colorMap, iconMap } from "@/lib/logoMaping";
 
 export default function Project({
   title,
@@ -29,7 +30,7 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 last:mb-0 sm:mb-8 "
+      className="group mb-3 last:mb-0 sm:mb-8"
     >
       <section className="relative max-w-[48rem] rounded-lg border border-black/5 bg-white transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:grid sm:h-[20rem] sm:grid-cols-2 sm:gap-4 sm:pl-8 sm:pr-8">
         {/* <!-- Title --> */}
@@ -71,14 +72,34 @@ export default function Project({
             {description}
           </p>
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] tracking-wider text-white dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
+            {tags.map((tag, index) => {
+              const Icon = iconMap[tag];
+              const color = colorMap[tag];
+
+              return (
+                <li
+                  key={index}
+                  className="flex items-center rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] tracking-wider text-white dark:text-white/70"
+                >
+                  {Icon ? (
+                    <Icon className={`h-4 w-4 ${color}`} />
+                  ) : (
+                    <span className="flex h-4 w-4 items-center justify-center text-[0.6rem] font-bold">
+                      {tag.charAt(0)}
+                    </span>
+                  )}
+                  <motion.span
+                    className="ml-2 hidden sm:inline-block"
+                    initial={{ opacity: 0, width: 0 }}
+                    whileHover={{ opacity: 1, width: "auto" }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {tag}
+                  </motion.span>
+                  <span className="ml-2 sm:hidden">{tag}</span>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
