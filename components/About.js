@@ -116,7 +116,7 @@ export default function About() {
               damping={1e-1}
               triggerOnce={true}
             >
-              <iframe
+              {/* <iframe
                 // width="560"
                 // height="315"
                 src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
@@ -126,7 +126,7 @@ export default function About() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="mx-auto mt-10 px-8 sm:min-h-[50vw] sm:min-w-[80vw] lg:min-h-[35vw] lg:min-w-[60vw] xl:min-h-[20vw] xl:min-w-[40vw]"
-              ></iframe>
+              ></iframe> */}
             </Fade>
           </div>
         </div>

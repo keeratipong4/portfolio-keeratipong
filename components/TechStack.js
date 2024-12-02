@@ -62,38 +62,46 @@ const colorMap = {
   MySQL: "text-[#4479A1]",
   "Socket.io": "text-[#010101] dark:text-white",
 };
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
   },
-  animate: (index) => ({
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index,
+      type: "spring",
+      stiffness: 30,
+      damping: 30,
     },
-  }),
+  },
 };
-
 export default function TechStack({ skillData }) {
   return (
     <div className="py-12">
       <SectionHeading>Tools & Technologies</SectionHeading>
-      <div className="mx-auto grid max-w-4xl grid-cols-3 gap-8 px-4 md:grid-cols-4 md:gap-8 lg:grid-cols-5">
+      <motion.div
+        className="mx-auto grid max-w-4xl grid-cols-3 gap-8 px-4 md:grid-cols-4 md:gap-8 lg:grid-cols-5"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+      >
         {skillData.map((skill, index) => {
           const Icon = iconMap[skill] || TbBrandReactNative; // Default to React icon if not found
           return (
             <motion.li
               key={index}
               className="flex flex-col items-center gap-2 transition-transform hover:scale-110"
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
+              variants={itemVariants}
             >
               <Icon
                 className={`h-10 w-10 transition-colors md:h-16 md:w-16 lg:h-12 lg:w-12 ${colorMap[skill] || "hover:text-gray-600"}`}
@@ -102,7 +110,7 @@ export default function TechStack({ skillData }) {
             </motion.li>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }
