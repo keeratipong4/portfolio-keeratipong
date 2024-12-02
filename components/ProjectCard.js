@@ -1,13 +1,13 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 import { FaDisplay } from "react-icons/fa6";
 import { colorMap, iconMap } from "@/lib/logoMaping";
 
-export default function Project({
+export default function ProjectCard({
   title,
   description,
   tags,
@@ -22,6 +22,12 @@ export default function Project({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const variants = {
+    hidden: { width: 0, opacity: 0 },
+    visible: { width: "auto", opacity: 1 },
+  };
 
   return (
     <motion.div
@@ -30,15 +36,16 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
       <section className="relative max-w-[48rem] rounded-lg border border-black/5 bg-white transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:grid sm:h-[20rem] sm:grid-cols-2 sm:gap-4 sm:pl-8 sm:pr-8">
-        {/* <!-- Title --> */}
         <h3 className="col-span-2 ml-2 mt-3 text-2xl font-semibold sm:col-span-2">
           {title}
         </h3>
 
-        {/* <!-- Left Column --> */}
+        {/* Left Column */}
         <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:col-span-1 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-4">
           <Image
             src={imageUrl}
@@ -46,9 +53,8 @@ export default function Project({
             quality={95}
             width={400}
             height={100}
-            className="group:-left-20 group:right-[initial] group:group-hover:translate-x-3 group:group-hover:translate-y-3 group:group-hover:rotate-2 -right-20 top-8 rounded-t-lg shadow-2xl transition group-hover:-translate-x-3 group-hover:-translate-y-3 group-hover:scale-[1.03]"
+            className="top-8 rounded-t-lg shadow-2xl transition group-hover:-translate-y-3 group-hover:translate-x-3 group-hover:scale-[1.03]"
           />
-
           <div className="flex gap-4">
             <a
               className="group flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-4 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 active:scale-105 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-800 xs:px-7 xs:py-3 sm:text-sm"
@@ -66,8 +72,8 @@ export default function Project({
             </a>
           </div>
         </div>
-        {/* <!-- Right Column --> */}
-        <div className="sm:col-span-1">
+        {/* Tags Section */}
+        <div className="mb-3 ml-3 sm:col-span-1">
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
@@ -88,17 +94,21 @@ export default function Project({
                       {tag.charAt(0)}
                     </span>
                   )}
-                  {/* <motion.span
-                    className="ml-2 hidden sm:inline-block"
-                    initial={{ opacity: 0, width: 0 }}
-                    whileHover={{ opacity: 1, width: "auto" }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {tag}
-                  </motion.span> */}
-                  <span className="ml-2 hidden w-0 opacity-0 transition-all duration-500 ease-in-out group-hover:inline-block group-hover:w-auto group-hover:opacity-100">
-                    {tag}
-                  </span>
+                  {isHovered && (
+                    <motion.span
+                      className="ml-2 hidden sm:inline-block"
+                      variants={variants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="hidden"
+                      transition={{
+                        duration: 0.5,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      {tag}
+                    </motion.span>
+                  )}
                   <span className="ml-2 sm:hidden">{tag}</span>
                 </li>
               );
