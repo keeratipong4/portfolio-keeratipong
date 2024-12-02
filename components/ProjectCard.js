@@ -14,6 +14,7 @@ export default function ProjectCard({
   imageUrl,
   repo,
   liveDemo,
+  content,
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -77,6 +78,7 @@ export default function ProjectCard({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
+          {/* {content} */}
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
             {tags.map((tag, index) => {
               const Icon = iconMap[tag];
