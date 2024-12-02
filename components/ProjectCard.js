@@ -51,17 +51,17 @@ export default function Project({
 
           <div className="flex gap-4">
             <a
-              className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border border-slate-600 bg-white px-4 py-1 text-xs outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 xs:px-7 xs:py-3 sm:text-sm"
+              className="group flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-4 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 active:scale-105 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-800 xs:px-7 xs:py-3 sm:text-sm"
               href={repo}
             >
-              <SiGithub className="transition group-hover:translate-y-1" />
+              <SiGithub />
               View code
             </a>
             <a
-              className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full border border-slate-600 bg-white px-4 py-1 text-xs outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 xs:px-7 xs:py-3 sm:text-sm"
+              className="group flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-4 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 active:scale-105 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-800 xs:px-7 xs:py-3 sm:text-sm"
               href={liveDemo}
             >
-              <FaDisplay className="transition group-hover:translate-y-1" />
+              <FaDisplay />
               Live Demo
             </a>
           </div>
@@ -88,14 +88,17 @@ export default function Project({
                       {tag.charAt(0)}
                     </span>
                   )}
-                  <motion.span
+                  {/* <motion.span
                     className="ml-2 hidden sm:inline-block"
                     initial={{ opacity: 0, width: 0 }}
                     whileHover={{ opacity: 1, width: "auto" }}
                     transition={{ duration: 0.3 }}
                   >
                     {tag}
-                  </motion.span>
+                  </motion.span> */}
+                  <span className="ml-2 hidden w-0 opacity-0 transition-all duration-500 ease-in-out group-hover:inline-block group-hover:w-auto group-hover:opacity-100">
+                    {tag}
+                  </span>
                   <span className="ml-2 sm:hidden">{tag}</span>
                 </li>
               );
