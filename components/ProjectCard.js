@@ -102,7 +102,7 @@ export default function ProjectCard({
                       animate="visible"
                       exit="hidden"
                       transition={{
-                        duration: 0.5,
+                        duration: 0.8,
                         ease: "easeInOut",
                       }}
                     >
