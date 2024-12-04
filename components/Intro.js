@@ -21,7 +21,7 @@ function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-8 max-w-[75rem] scroll-mt-[100rem] text-center sm:mb-0"
+      className="mb-2 max-w-[75rem] scroll-mt-[100rem] text-center sm:mb-3"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -73,52 +73,55 @@ function Intro() {
       </Fade>
 
       <motion.div
-        className="flex items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row"
+        className="flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
       >
-        <Link
-          href="#contact"
-          className="group flex items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-gray-900 px-4 py-1 text-xs text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 xs:px-7 xs:py-3 sm:text-sm"
-          onClick={() => {
-            setActiveSection("#contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me
-          <BsArrowRight className="hidden opacity-70 transition group-hover:translate-x-1 xs:block" />
-          <Mail
-            color={"#9ca3af"}
-            className="hidden opacity-70 transition group-hover:-translate-x-1 xs:block"
-          />
-        </Link>
-        <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-white px-4 py-1 text-xs outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 xs:px-7 xs:py-3 sm:text-sm"
-          href="/resume-Keeratipong.pdf"
-          download
-        >
-          Download CV
-          <HiDownload className="hidden opacity-60 transition group-hover:translate-y-1 xs:block" />
-        </a>
+        <div className="flex gap-4">
+          <Link
+            href="#contact"
+            className="group flex items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-gray-900 px-4 py-2 text-xs text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 xs:px-7 xs:py-3 sm:text-sm"
+            onClick={() => {
+              setActiveSection("#contact");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            Contact me
+            <BsArrowRight className="hidden opacity-70 transition group-hover:translate-x-1 xs:block" />
+            <Mail
+              color={"#9ca3af"}
+              className="hidden opacity-70 transition group-hover:-translate-x-1 xs:block"
+            />
+          </Link>
+          <a
+            className="borderBlack group flex cursor-pointer items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-white px-4 py-2 text-xs outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 xs:px-7 xs:py-3 sm:text-sm"
+            href="/resume-Keeratipong.pdf"
+            download
+          >
+            Download CV
+            <HiDownload className="hidden opacity-60 transition group-hover:translate-y-1 xs:block" />
+          </a>
+        </div>
+        <div className="flex gap-4">
+          <a
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-3 text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+            href="https://www.linkedin.com/in/keeratipong-boonnapongkasem-99259527b/"
+            target="_blank"
+          >
+            <BsLinkedin />
+          </a>
 
-        <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-4 text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/keeratipong-boonnapongkasem-99259527b/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-4 text-[1.35rem] text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/keeratipong4"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+          <a
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-3 text-[1.35rem] text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
+            href="https://github.com/keeratipong4"
+            target="_blank"
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
