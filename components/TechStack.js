@@ -72,7 +72,7 @@ const itemVariants = {
 };
 export default function TechStack({ skillData }) {
   return (
-    <div className="py-12">
+    <div className="-mb-20 py-10">
       <SectionHeading>Tools & Technologies</SectionHeading>
       <motion.div
         className="mx-auto grid max-w-4xl grid-cols-3 gap-8 px-4 md:grid-cols-4 md:gap-8 lg:grid-cols-5"
@@ -83,7 +83,6 @@ export default function TechStack({ skillData }) {
       >
         {skillData.map((skill, index) => {
           const Icon = techLogos[skill].svg || TbBrandReactNative; // Default to React icon if not found
-          // const Icon = iconMap[skill] || TbBrandReactNative; // Default to React icon if not found
           return (
             <motion.li
               key={index}

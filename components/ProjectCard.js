@@ -46,7 +46,6 @@ export default function ProjectCard({
 
         {/* Left Column */}
         <div className="flex h-full flex-col px-2 pb-5 pt-4 sm:col-span-1">
-          {/* <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:col-span-1 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-4"> */}
           <Image
             className="top-8 mx-auto mb-5 rounded-t-md shadow-2xl transition duration-1000 group-hover:scale-[1.05]"
             src={imageUrl}
@@ -57,14 +56,14 @@ export default function ProjectCard({
           />
           <div className="flex justify-center gap-5">
             <a
-              className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
+              className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-2 text-sm outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
               href={repo}
             >
               <SiGithub />
               View code
             </a>
             <a
-              className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
+              className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-2 text-sm outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
               href={liveDemo}
             >
               <FaDisplay />
