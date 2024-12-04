@@ -21,9 +21,10 @@ function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-[100rem]">
+      className="mb-8 max-w-[75rem] scroll-mt-[100rem] text-center sm:mb-0"
+    >
       <div className="flex items-center justify-center">
-        <div className="relative ">
+        <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -32,7 +33,8 @@ function Intro() {
               stiffness: 125,
               damping: 10,
               duration: 0.2,
-            }}>
+            }}
+          >
             <Image
               src={portraitImage}
               width="480"
@@ -41,7 +43,7 @@ function Intro() {
               quality={80}
               priority={true}
               placeholder="blur"
-              className="h-48 w-48 rounded-full object-cover border-[0.1rem] border-white shadow-xl"
+              className="h-48 w-48 rounded-full border-[0.1rem] border-white object-cover shadow-xl"
             />
           </motion.div>
         </div>
@@ -52,7 +54,8 @@ function Intro() {
         delay={400}
         cascade
         damping={1e-1}
-        triggerOnce={true}>
+        triggerOnce={true}
+      >
         <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
           <span className="font-medium !leading-[1.5]">
             <span className="text-xl sm:text-2xl">👋 Hi, my name is </span>
@@ -70,45 +73,50 @@ function Intro() {
       </Fade>
 
       <motion.div
-        className="flex sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
+        className="flex items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
-        }}>
+        }}
+      >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white text-xs sm:text-sm xs:px-7 xs:py-3 px-4 py-1 flex items-center gap-2 rounded-full border border-slate-600 outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group flex items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-gray-900 px-4 py-1 text-xs text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 xs:px-7 xs:py-3 sm:text-sm"
           onClick={() => {
             setActiveSection("#contact");
             setTimeOfLastClick(Date.now());
-          }}>
+          }}
+        >
           Contact me
-          <BsArrowRight className="hidden xs:block opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowRight className="hidden opacity-70 transition group-hover:translate-x-1 xs:block" />
           <Mail
             color={"#9ca3af"}
-            className="hidden xs:block opacity-70 group-hover:-translate-x-1 transition"
+            className="hidden opacity-70 transition group-hover:-translate-x-1 xs:block"
           />
         </Link>
         <a
-          className="group bg-white text-xs sm:text-sm xs:px-7 xs:py-3 px-4 py-1 flex items-center gap-2 rounded-full border border-slate-600 outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="borderBlack group flex cursor-pointer items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-white px-4 py-1 text-xs outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 xs:px-7 xs:py-3 sm:text-sm"
           href="/resume-Keeratipong.pdf"
-          download>
+          download
+        >
           Download CV
-          <HiDownload className="hidden xs:block opacity-60 group-hover:translate-y-1 transition" />
+          <HiDownload className="hidden opacity-60 transition group-hover:translate-y-1 xs:block" />
         </a>
 
         <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-4 text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/keeratipong-boonnapongkasem-99259527b/"
-          target="_blank">
+          target="_blank"
+        >
           <BsLinkedin />
         </a>
 
         <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-4 text-[1.35rem] text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
           href="https://github.com/keeratipong4"
-          target="_blank">
+          target="_blank"
+        >
           <FaGithubSquare />
         </a>
       </motion.div>

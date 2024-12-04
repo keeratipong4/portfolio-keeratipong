@@ -1,7 +1,52 @@
 "use client";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { iconMap, colorMap, TbBrandReactNative } from "../lib/logoMaping";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiGit,
+  SiTailwindcss,
+  SiSupabase,
+  SiPostman,
+  SiNodedotjs,
+  SiExpress,
+  SiSocketdotio,
+  SiStyledcomponents,
+} from "react-icons/si";
+import {
+  ReactQueryLogo,
+  ViteIcon,
+  StyledComponentsIcon,
+  HtmlLogo,
+  CssLogo,
+  JavaScriptLogo,
+  FramerMotionLogo,
+  MysqlLogo,
+} from "../lib/Icons";
+import { TbBrandReactNative } from "react-icons/tb";
+
+const techLogos = {
+  HTML: { svg: HtmlLogo, color: "" },
+  CSS: { svg: CssLogo, color: "" },
+  JavaScript: { svg: JavaScriptLogo, color: "" },
+  "React.js": { svg: SiReact, color: "text-[#61DAFB]" },
+  "Next.js": { svg: SiNextdotjs, color: "text-[#000000] dark:text-white" },
+  Redux: { svg: SiRedux, color: "text-[#764ABC]" },
+  "Redux Toolkit": { svg: SiRedux, color: "text-[#764ABC]" },
+  "React Query": { svg: ReactQueryLogo, color: "" },
+  Git: { svg: SiGit, color: "text-[#F05032]" },
+  Tailwind: { svg: SiTailwindcss, color: "text-[#06B6D4]" },
+  "Framer Motion": { svg: FramerMotionLogo, color: "" },
+  Supabase: { svg: SiSupabase, color: "text-[#3ECF8E]" },
+  Postman: { svg: SiPostman, color: "text-[#FF6C37]" },
+  "Node.js": { svg: SiNodedotjs, color: "text-[#339933]" },
+  "Express.js": { svg: SiExpress, color: "text-[#000000] dark:text-white" },
+  MySQL: { svg: MysqlLogo, color: "" },
+  "Socket.io": { svg: SiSocketdotio, color: "text-[#010101] dark:text-white" },
+  StyledComponent: { svg: SiStyledcomponents, color: "text-[#DB7093]" },
+  Vite: { svg: ViteIcon, color: "" },
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,7 +82,8 @@ export default function TechStack({ skillData }) {
         viewport={{ once: true }}
       >
         {skillData.map((skill, index) => {
-          const Icon = iconMap[skill] || TbBrandReactNative; // Default to React icon if not found
+          const Icon = techLogos[skill].svg || TbBrandReactNative; // Default to React icon if not found
+          // const Icon = iconMap[skill] || TbBrandReactNative; // Default to React icon if not found
           return (
             <motion.li
               key={index}
@@ -45,7 +91,7 @@ export default function TechStack({ skillData }) {
               variants={itemVariants}
             >
               <Icon
-                className={`h-10 w-10 transition-colors md:h-16 md:w-16 lg:h-12 lg:w-12 ${colorMap[skill] || "hover:text-gray-600"}`}
+                className={`h-10 w-10 transition-colors md:h-16 md:w-16 lg:h-12 lg:w-12 ${techLogos[skill].color || "hover:text-gray-600"}`}
               />
               <span className="text-center text-sm font-medium">{skill}</span>
             </motion.li>

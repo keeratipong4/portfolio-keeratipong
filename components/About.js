@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <motion.section
-      className="mb-20 mt-14 max-w-[55rem] scroll-mt-28 text-center leading-8 sm:mb-28"
+      className="mb-20 mt-14 max-w-[55rem] scroll-mt-28 text-center leading-8 sm:mb-20"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -108,7 +108,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="">
             <Fade
               direction="right"
               delay={600}
@@ -116,7 +116,8 @@ export default function About() {
               damping={1e-1}
               triggerOnce={true}
             >
-              {/* <iframe
+              <iframe
+                className="mx-auto mt-10 min-h-48 w-full px-8 sm:max-h-[90vw] sm:min-h-[45vw] md:min-h-[28vw] md:max-w-[60vw] lg:min-h-[25vw] lg:max-w-[50vw] xl:min-h-[15vw] xl:max-w-[50vw]"
                 // width="560"
                 // height="315"
                 src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
@@ -125,8 +126,7 @@ export default function About() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-                className="mx-auto mt-10 px-8 sm:min-h-[50vw] sm:min-w-[80vw] lg:min-h-[35vw] lg:min-w-[60vw] xl:min-h-[20vw] xl:min-w-[40vw]"
-              ></iframe> */}
+              ></iframe>
             </Fade>
           </div>
         </div>
