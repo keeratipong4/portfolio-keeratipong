@@ -41,31 +41,30 @@ export default function ProjectCard({
       onHoverEnd={() => setIsHovered(false)}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
-      <section className="relative max-w-[48rem] rounded-lg border border-black/5 bg-white transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:grid sm:h-[20rem] sm:grid-cols-2 sm:gap-4 sm:pl-8 sm:pr-8">
-        <h3 className="col-span-2 ml-2 mt-3 text-2xl font-semibold sm:col-span-2">
-          {title}
-        </h3>
+      <section className="relative max-w-[48rem] rounded-lg border border-black/5 bg-white transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:grid sm:h-full sm:grid-cols-2 sm:gap-4 sm:pl-8 sm:pr-8">
+        <h3 className="col-span-2 ml-2 mt-3 font-semibold">{title}</h3>
 
         {/* Left Column */}
-        <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:col-span-1 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-4">
+        <div className="flex h-full flex-col px-2 pb-5 pt-4 sm:col-span-1">
+          {/* <div className="flex h-full flex-col px-5 pb-7 pt-4 sm:col-span-1 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-4"> */}
           <Image
+            className="top-8 mx-auto mb-5 rounded-t-md shadow-2xl transition duration-1000 group-hover:scale-[1.05]"
             src={imageUrl}
-            alt="Project I worked on"
+            alt={title}
             quality={95}
             width={400}
             height={100}
-            className="top-8 rounded-t-lg shadow-2xl transition group-hover:-translate-y-3 group-hover:translate-x-3 group-hover:scale-[1.03]"
           />
-          <div className="flex gap-4">
+          <div className="flex justify-center gap-5">
             <a
-              className="group flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-4 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 active:scale-105 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-800 xs:px-7 xs:py-3 sm:text-sm"
+              className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
               href={repo}
             >
               <SiGithub />
               View code
             </a>
             <a
-              className="group flex cursor-pointer items-center gap-2 rounded-full border border-gray-300 bg-gray-100 px-4 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 active:scale-105 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-100 dark:hover:bg-gray-100 dark:hover:text-gray-800 xs:px-7 xs:py-3 sm:text-sm"
+              className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-1 text-xs outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
               href={liveDemo}
             >
               <FaDisplay />
@@ -73,13 +72,13 @@ export default function ProjectCard({
             </a>
           </div>
         </div>
-        {/* Tags Section */}
-        <div className="mb-3 ml-3 sm:col-span-1">
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+        {/* Right column */}
+        <div className="mx-2 mb-5 sm:col-span-1">
+          <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
           {/* {content} */}
-          <ul className="mt-4 flex flex-wrap gap-2 sm:mt-auto">
+          <ul className="mt-3 flex flex-wrap gap-2">
             {tags.map((tag, index) => {
               const Icon = iconMap[tag];
               const color = colorMap[tag];
@@ -87,7 +86,7 @@ export default function ProjectCard({
               return (
                 <li
                   key={index}
-                  className="flex items-center rounded-full bg-black/[0.7] px-3 py-1 text-[0.7rem] tracking-wider text-white dark:text-white/70"
+                  className="flex items-center rounded-full bg-black/[0.7] px-2 py-1 text-[0.7rem] tracking-wider text-white dark:text-white/70"
                 >
                   {Icon ? (
                     <Icon className={`h-4 w-4 ${color}`} />
