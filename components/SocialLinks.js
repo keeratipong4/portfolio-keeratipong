@@ -57,12 +57,14 @@ export default function SocialLinks() {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-white p-2 shadow-lg transition-shadow duration-300 ease-in-out hover:scale-[1.2] hover:shadow-lg focus:scale-[1.2] active:scale-105 dark:bg-white/10"
+            className="group rounded-full bg-white p-2 shadow-lg transition-shadow duration-300 ease-in-out hover:scale-[1.2] hover:shadow-lg focus:scale-[1.2] active:scale-105 dark:bg-white/10"
           >
             <social.icon
               className={`h-8 w-8 cursor-pointer duration-300 ease-in-out ${social.color} bg-white`}
             />
-            <span className="sr-only">{social.name}</span>
+            <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-500 px-1 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-gray-700">
+              {social.name}
+            </span>{" "}
             {/* <span className="sr-only">{social.name}</span> */}
           </Link>
         ))}
