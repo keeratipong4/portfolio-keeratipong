@@ -1,18 +1,24 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { FaFacebookSquare, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@/lib/Icons";
+import {
+  FacebookLogo,
+  GithubLogo,
+  InstagramLogo,
+  LinkedInLogo,
+  YoutubeLogo,
+} from "@/lib/Icons";
 
 import Link from "next/link";
 
 export default function SocialLinks() {
   const socialLinks = [
     {
-      name: "Facebook",
-      icon: FacebookLogo,
-      // icon: FaFacebookSquare,
-      color: "text-[#0055FF]",
-      url: "https://www.facebook.com/cheeblackblue",
+      name: "github",
+      icon: GithubLogo,
+      color: "",
+      url: "https://github.com/keeratipong4",
     },
+
     {
       name: "Instagram",
       icon: InstagramLogo,
@@ -21,16 +27,29 @@ export default function SocialLinks() {
       url: "https://www.instagram.com/nai_chee/",
     },
     {
+      name: "Facebook",
+      icon: FacebookLogo,
+      // icon: FaFacebookSquare,
+      color: "text-[#0055FF]",
+      url: "https://www.facebook.com/cheeblackblue",
+    },
+    {
       name: "YouTube",
       icon: YoutubeLogo,
       // icon: FaYoutube,
       color: "text-[#FF4154]",
       url: "https://youtube.com/keeratipong",
     },
+    {
+      name: "LinkedIn",
+      icon: LinkedInLogo,
+      color: "",
+      url: "https://www.linkedin.com/in/keeratipong-boonnapongkasem-99259527b/",
+    },
   ];
 
   return (
-    <div className="mt-3 flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="flex space-x-6">
         {socialLinks.map((social) => (
           <Link
@@ -44,6 +63,7 @@ export default function SocialLinks() {
               className={`h-8 w-8 cursor-pointer duration-300 ease-in-out ${social.color} bg-white`}
             />
             <span className="sr-only">{social.name}</span>
+            {/* <span className="sr-only">{social.name}</span> */}
           </Link>
         ))}
       </div>

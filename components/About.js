@@ -84,7 +84,7 @@ export default function About() {
                     😄🎉
                   </p>
                 </Fade>
-                <Fade
+                {/* <Fade
                   direction="up"
                   delay={800}
                   cascade
@@ -104,7 +104,7 @@ export default function About() {
                     </p>
                   </Fade>
                   <SocialLinks />
-                </Fade>
+                </Fade> */}
               </div>
             </div>
           </div>

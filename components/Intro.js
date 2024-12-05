@@ -13,6 +13,7 @@ import { HiDownload } from "react-icons/hi";
 import { Mail } from "lucide-react";
 import { useSectionInView } from "@/hooks/useInView";
 import { useActiveSectionContext } from "../contexts/active-section";
+import SocialLinks from "./SocialLinks";
 
 function Intro() {
   const { ref } = useSectionInView("#home", 0.5);
@@ -106,7 +107,8 @@ function Intro() {
           </a>
         </div>
         <div className="flex gap-4">
-          <a
+          <SocialLinks />
+          {/* <a
             className="flex cursor-pointer items-center gap-2 rounded-full bg-gray-900 p-3 text-white transition hover:scale-[1.15] focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60"
             href="https://www.linkedin.com/in/keeratipong-boonnapongkasem-99259527b/"
             target="_blank"
@@ -120,7 +122,7 @@ function Intro() {
             target="_blank"
           >
             <FaGithubSquare />
-          </a>
+          </a> */}
         </div>
       </motion.div>
     </section>
