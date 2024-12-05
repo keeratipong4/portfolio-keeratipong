@@ -116,7 +116,7 @@ export default function About() {
               damping={1e-1}
               triggerOnce={true}
             >
-              <iframe
+              {/* <iframe
                 className="mx-auto mt-10 min-h-48 w-full px-8 sm:max-h-[90vw] sm:min-h-[45vw] md:min-h-[28vw] md:max-w-[60vw] lg:min-h-[25vw] lg:max-w-[50vw] xl:min-h-[18vw] xl:max-w-[50vw] xl:px-3"
                 // width="560"
                 // height="315"
@@ -126,7 +126,7 @@ export default function About() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-              ></iframe>
+              ></iframe> */}
             </Fade>
           </div>
         </div>

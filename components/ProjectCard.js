@@ -45,15 +45,32 @@ export default function ProjectCard({
         <h3 className="col-span-2 ml-2 mt-3 font-semibold">{title}</h3>
 
         {/* Left Column */}
-        <div className="flex h-full flex-col px-2 pb-5 pt-4 sm:col-span-1">
-          <Image
+        <div className="flex h-full flex-col px-2 pb-5 pt-2 sm:col-span-1">
+          {/* <Image
             className="top-8 mx-auto mb-5 rounded-t-md shadow-2xl transition duration-1000 group-hover:scale-[1.05]"
             src={imageUrl}
             alt={title}
             quality={95}
             width={400}
             height={100}
-          />
+          /> */}
+          <div className="relative mb-3 h-48 overflow-hidden sm:h-full">
+            <Image
+              className="mx-auto mb-5 h-full rounded-t-md shadow-2xl transition duration-1000"
+              width={400}
+              height={100}
+              src="/macbook-desktop.png"
+              alt="macbook-desktop"
+            />
+            <Image
+              className="absolute inset-0 mx-auto my-auto flex rounded-sm duration-1000 group-hover:scale-[1.07] sm:scale-[0.9] sm:group-hover:scale-[1.02] md:scale-[1] md:group-hover:scale-[1.07]"
+              src={imageUrl}
+              alt={title}
+              quality={95}
+              width={250}
+              height={60}
+            />
+          </div>
           <div className="flex justify-center gap-5">
             <a
               className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-2 text-sm outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
