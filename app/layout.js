@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Keeratipong",
     images: [
       {
-        url: "/keeratipong-portrait-ori.jpg", // Replace with your actual OG image path
+        url: "/preview-page-keeratipong.png", // Replace with your actual OG image path
         width: 1200,
         height: 630,
         alt: "Keeratipong - Web Developer Portfolio",

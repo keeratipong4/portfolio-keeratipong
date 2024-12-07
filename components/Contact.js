@@ -3,6 +3,8 @@
 import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useInView";
+// import { sendEmail } from "@/lib/actions";
+
 import SubmitBotton from "./SubmitButton";
 
 export default function Contact() {
@@ -28,13 +30,30 @@ export default function Contact() {
     >
       <SectionHeading>{"Contact Me"}</SectionHeading>
 
-      <p className="mt-6 text-gray-700 dark:text-white/80">
-        {"Feel free to contact me directly through this form"}
+      <p className="mt-5 text-gray-700 dark:text-white/80">
+        Feel free to contact me directly at{" "}
+        <a className="underline" href="mailto:keeratipong4@gmail.com">
+          keeratipong4@gmail.com
+        </a>
+        <br />
+        or through this form
       </p>
 
-      <form className="mt-10 flex flex-col dark:text-black">
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        // action={async (formData) => {
+        //   const { data, error } = await sendEmail(formData);
+
+        //   if (error) {
+        //     toast.error(error);
+        //     return;
+        //   }
+
+        //   toast.success("Email sent successfully!");
+        // }}
+      >
         <input
-          className="borderBlack h-14 rounded-lg px-4 transition-all dark:bg-white dark:bg-opacity-20 dark:outline-none dark:focus:bg-opacity-10"
+          className="h-14 rounded-lg border border-black/20 px-4 transition-all dark:bg-white dark:bg-opacity-20 dark:outline-none dark:focus:bg-opacity-10"
           name="senderEmail"
           type="email"
           required
@@ -42,7 +61,7 @@ export default function Contact() {
           placeholder={"Your email"}
         />
         <textarea
-          className="borderBlack my-3 h-52 resize-none rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-20 dark:outline-none dark:focus:bg-opacity-10"
+          className="my-3 h-52 resize-none rounded-lg border border-black/20 p-4 transition-all dark:bg-white dark:bg-opacity-20 dark:outline-none dark:focus:bg-opacity-10"
           name="message"
           placeholder={"message"}
           required
