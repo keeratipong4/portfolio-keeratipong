@@ -56,7 +56,7 @@ export default function ProjectCard({
           /> */}
           <div className="relative mb-3 h-48 overflow-hidden sm:h-full">
             <Image
-              className="mx-auto mb-5 h-full rounded-t-md shadow-2xl transition duration-1000"
+              className="mx-auto mb-5 h-full w-auto rounded-t-md shadow-2xl transition duration-1000"
               width={400}
               height={100}
               src="/macbook-desktop.png"

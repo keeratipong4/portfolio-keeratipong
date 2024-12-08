@@ -3,9 +3,9 @@
 import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useInView";
-// import { sendEmail } from "@/lib/actions";
-
+import { sendEmail } from "@/lib/actions";
 import SubmitBotton from "./SubmitButton";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("#contact");
@@ -41,16 +41,16 @@ export default function Contact() {
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        // action={async (formData) => {
-        //   const { data, error } = await sendEmail(formData);
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
 
-        //   if (error) {
-        //     toast.error(error);
-        //     return;
-        //   }
+          if (error) {
+            toast.error(error);
+            return;
+          }
 
-        //   toast.success("Email sent successfully!");
-        // }}
+          toast.success("Email sent successfully!");
+        }}
       >
         <input
           className="h-14 rounded-lg border border-black/20 px-4 transition-all dark:bg-white dark:bg-opacity-20 dark:outline-none dark:focus:bg-opacity-10"
