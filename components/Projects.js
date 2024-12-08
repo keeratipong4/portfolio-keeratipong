@@ -1,6 +1,4 @@
 "use client";
-
-import React from "react";
 import SectionHeading from "./SectionHeading";
 import { projectsData } from "@/lib/data";
 import ProjectCard from "./ProjectCard";
