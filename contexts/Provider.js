@@ -9,7 +9,7 @@ export default function Providers({ children }) {
     <ThemeContextProvider>
       <ActiveSectionContextProvider>
         {/* <Analytics /> */}
-        <Toaster />
+        <Toaster position="bottom-center" />
         {children}
       </ActiveSectionContextProvider>
     </ThemeContextProvider>
