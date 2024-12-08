@@ -21,8 +21,8 @@ export default function ContactFormEmail(props) {
       <Tailwind>
         <Body className="bg-gray-100 text-black">
           <Container>
-            <Section className="my-10 rounded-md border border-black/10 bg-white px-10 py-4 text-sm">
-              <Heading className="leading-tight">
+            <Section className="my-10 rounded-md border border-black/10 bg-white px-10 py-4">
+              <Heading className="text-sm leading-tight">
                 You received the following message from the contact form
               </Heading>
               <Text>{message}</Text>
