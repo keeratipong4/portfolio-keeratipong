@@ -70,16 +70,29 @@ const itemVariants = {
     },
   },
 };
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
 export default function TechStack({ skillData }) {
   return (
     <div className="-mb-20 py-10">
       <SectionHeading>Tools & Technologies</SectionHeading>
-      <motion.div
-        className="mx-auto grid max-w-4xl grid-cols-3 gap-8 px-4 md:grid-cols-4 md:gap-8 lg:grid-cols-5"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        viewport={{ once: true }}
+      <motion.ul
+        className="mx-auto mt-10 grid max-w-4xl grid-cols-3 gap-8 px-4 md:grid-cols-4 md:gap-8 lg:grid-cols-5"
+        // variants={containerVariants}
+        // initial="hidden"
+        // animate="visible"
+        // viewport={{ once: true }}
       >
         {skillData.map((skill, index) => {
           const Icon = techLogos[skill].svg || TbBrandReactNative; // Default to React icon if not found
@@ -87,7 +100,14 @@ export default function TechStack({ skillData }) {
             <motion.li
               key={index}
               className="flex flex-col items-center gap-2 transition-transform hover:scale-110"
-              variants={itemVariants}
+              // variants={itemVariants}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
             >
               <Icon
                 className={`h-10 w-10 transition-colors md:h-16 md:w-16 lg:h-12 lg:w-12 ${techLogos[skill].color || "hover:text-gray-600"}`}
@@ -96,7 +116,7 @@ export default function TechStack({ skillData }) {
             </motion.li>
           );
         })}
-      </motion.div>
+      </motion.ul>
     </div>
   );
 }

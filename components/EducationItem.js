@@ -7,6 +7,7 @@ export default function EducationItem({
   logo,
   title,
   year,
+  link,
   description,
   credential,
 }) {
@@ -31,8 +32,10 @@ export default function EducationItem({
         triggerOnce={true}
       >
         <div className="items-center">
-          <h1 className="font-semibold text-amber-400">{institution}</h1>
-          <h2>{title}</h2>
+          <h1 className="font-bold text-amber-400">{institution}</h1>
+          <Link href={link} className="hover:text-blue-600 hover:underline">
+            {title}
+          </Link>
           <p className="text-sm text-gray-400 dark:text-gray-500">{year}</p>
 
           <p className="text-sm text-gray-400 dark:text-gray-500">
