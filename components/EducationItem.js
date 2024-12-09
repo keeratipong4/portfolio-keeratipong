@@ -20,7 +20,7 @@ export default function EducationItem({
         triggerOnce={true}
       >
         <div className="w-auto">
-          <Image src={logo} width={700} height={700} />
+          <Image src={logo} alt={logo} width={700} height={700} />
         </div>
       </Fade>
       <Fade
