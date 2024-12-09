@@ -61,7 +61,7 @@ function Intro() {
             Keeratipong
             <br />
             <span className="text-xl sm:text-2xl">
-              I&apos;m a web developer base{" "}
+              I&apos;m a web developer based{" "}
             </span>
             in Bangkok 😄
           </span>

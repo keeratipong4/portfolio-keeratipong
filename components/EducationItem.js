@@ -7,6 +7,7 @@ export default function EducationItem({
   logo,
   title,
   year,
+  description,
   credential,
 }) {
   return (
@@ -19,7 +20,7 @@ export default function EducationItem({
         triggerOnce={true}
       >
         <div className="w-auto">
-          <Image src={logo} width={700} height={700} className="" />
+          <Image src={logo} width={700} height={700} />
         </div>
       </Fade>
       <Fade
@@ -29,18 +30,20 @@ export default function EducationItem({
         damping={1e-1}
         triggerOnce={true}
       >
-        <div>
+        <div className="items-center">
           <h1 className="font-semibold text-amber-400">{institution}</h1>
           <h2>{title}</h2>
+          <p className="text-sm text-gray-400 dark:text-gray-500">{year}</p>
+
           <p className="text-sm text-gray-400 dark:text-gray-500">
-            Graduated: {year}
+            {description}
           </p>
           {credential && (
             <Link
               href={credential}
               className="flex w-fit items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-2 text-sm outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
             >
-              Show credential
+              View credential
             </Link>
           )}
         </div>
