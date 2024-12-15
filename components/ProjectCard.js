@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 import { FaDisplay } from "react-icons/fa6";
-import { colorMap, iconMap } from "@/lib/logoMaping";
+import { colorMap, iconMap, techLogos } from "@/lib/logoMaping";
 
 export default function ProjectCard({
   title,
@@ -77,7 +77,7 @@ export default function ProjectCard({
               href={repo}
             >
               <SiGithub />
-              View code
+              View Code
             </a>
             <a
               className="flex items-center gap-1 text-nowrap rounded-full border border-gray-300 bg-gray-100 px-2 py-2 text-sm outline-none transition hover:scale-110 hover:bg-gray-800 hover:text-white focus:scale-110 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-100 dark:hover:text-gray-800 sm:px-3"
@@ -96,6 +96,8 @@ export default function ProjectCard({
           {/* {content} */}
           <ul className="mt-3 flex flex-wrap gap-2">
             {tags.map((tag, index) => {
+              // const Icon = techLogos[tag].svg;
+              // const color = techLogos[tag].color;
               const Icon = iconMap[tag];
               const color = colorMap[tag];
 

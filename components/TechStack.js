@@ -23,6 +23,7 @@ import {
   JavaScriptLogo,
   FramerMotionLogo,
   MysqlLogo,
+  ReactRouterIcon,
 } from "../lib/Icons";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -46,6 +47,7 @@ const techLogos = {
   "Socket.io": { svg: SiSocketdotio, color: "text-[#010101] dark:text-white" },
   StyledComponent: { svg: SiStyledcomponents, color: "text-[#DB7093]" },
   Vite: { svg: ViteIcon, color: "" },
+  "React Router": { svg: ReactRouterIcon, color: "" },
 };
 
 const containerVariants = {
