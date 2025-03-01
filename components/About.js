@@ -138,7 +138,7 @@ export default function About() {
                 height="315"
                 src="https://www.youtube.com/embed/TjLQ9axjp0g?si=CB5jJes3wpdvxwBo"
                 title="YouTube video player"
-                frameborder="0"
+                frameborder="3"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
