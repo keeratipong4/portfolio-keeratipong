@@ -30,7 +30,7 @@ export default function About() {
           <SectionHeading>About Me</SectionHeading>
         </Fade>
 
-        <div className="mt-0 grid lg:text-start xl:grid-cols-2">
+        <div className="mt-0 grid gap-3 lg:text-start xl:grid-cols-2">
           <div className="flex-1">
             {/* Content */}
             <div className="text-lg">
@@ -121,27 +121,17 @@ export default function About() {
               damping={1e-1}
               triggerOnce={true}
             >
-              {/* <iframe
+              <iframe
                 className="mx-auto mt-10 min-h-48 w-full px-8 sm:max-h-[90vw] sm:min-h-[45vw] md:min-h-[28vw] md:max-w-[60vw] lg:min-h-[25vw] lg:max-w-[50vw] xl:min-h-[18vw] xl:max-w-[50vw] xl:px-3"
                 // width="560"
                 // height="315"
-                src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
-                
-                title="YouTube video player"
-                frameBorder="3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe> */}
-              <iframe
-                width="560"
-                height="315"
+                // src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
                 src="https://www.youtube.com/embed/TjLQ9axjp0g?si=CB5jJes3wpdvxwBo"
                 title="YouTube video player"
                 frameborder="3"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
               ></iframe>
             </Fade>
           </div>
