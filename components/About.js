@@ -89,6 +89,7 @@ export default function About() {
                     😄🎉
                   </p>
                 </Fade>
+
                 {/* <Fade
                   direction="up"
                   delay={800}
