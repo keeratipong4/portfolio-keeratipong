@@ -1,6 +1,8 @@
 # Hi, I'm Keeratipong 👋 😄
 
-You can also call me **Qi**. I'm a **Web Developer** based in Bangkok, Thailand. After dedicating over 12 years to running my own business, where I took on various roles with high levels of responsibility and adaptability, I am now transitioning into a career as a **Junior Front-End Developer**. Over the past year, I have focused on mastering modern web development technologies, including React.js, Next.js, Tailwind, and React Query through hands-on projects and am eager to contribute to a team with my dedication and problem-solving abilities.
+You can also call me **Qi**. I'm a **Web Developer** based in Bangkok, Thailand. I am fluent in Thai 🇹🇭, English 🇺🇸 and Chinese 🇨🇳.
+
+After dedicating over 12 years to running my own business, where I took on various roles with high levels of responsibility and adaptability, I am now transitioning into a career as a **Junior Front-End Developer**. Over the past year, I have focused on mastering modern web development technologies, including React.js, Next.js, Tailwind, and React Query through hands-on projects and am eager to contribute to a team with my dedication and problem-solving abilities.
 
 ## 👤 Personality
 
