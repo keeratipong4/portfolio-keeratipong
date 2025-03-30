@@ -52,11 +52,10 @@ export default function About() {
                   triggerOnce={true}
                 >
                   <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
-                    You can also call me{" "}
-                    <span className="font-semibold">Qi</span>. After dedicating
-                    over 12 years to running my own business, where I took on
-                    various roles with high levels of responsibility and
-                    adaptability, I am now transitioning into a career as a{" "}
+                    After dedicating over 12 years to running my own business,
+                    where I took on various roles with high levels of
+                    responsibility and adaptability, I am now transitioning into
+                    a career as a{" "}
                     <span className="font-semibold">
                       Junior Front-End Developer
                     </span>
