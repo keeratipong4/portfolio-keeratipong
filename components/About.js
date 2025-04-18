@@ -132,7 +132,7 @@ export default function About() {
                 // src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
                 src="https://www.youtube.com/embed/TjLQ9axjp0g?si=CB5jJes3wpdvxwBo"
                 title="YouTube video player"
-                frameborder="3"
+                frameBorder="3"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
