@@ -30,7 +30,7 @@ export default function About() {
           <SectionHeading>About Me</SectionHeading>
         </Fade>
 
-        <div className="mt-0 grid gap-3 lg:text-start xl:grid-cols-2">
+        <div className="mt-0 grid gap-8 lg:text-start xl:grid-cols-2 items-center">
           <div className="flex-1">
             {/* Content */}
             <div className="text-lg">
@@ -42,7 +42,7 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}
                 >
-                  <h3 className="font-bold">My story</h3>
+                  <h3 className="font-bold">Professional Summary</h3>
                 </Fade>
                 <Fade
                   direction="up"
@@ -52,20 +52,10 @@ export default function About() {
                   triggerOnce={true}
                 >
                   <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
-                    After dedicating over 12 years to running my own business,
-                    where I took on various roles with high levels of
-                    responsibility and adaptability, I am now transitioning into
-                    a career as a{" "}
-                    <span className="font-semibold">
-                      Junior Front-End Developer
-                    </span>
-                    . Over the past year, I have focused on mastering modern web
-                    development technologies, including{" "}
-                    <span className="font-semibold">
-                      React.js, Next.js, Tailwind, and React Query{" "}
-                    </span>
-                    through hands-on projects and am eager to contribute to a
-                    team with my dedication and problem-solving abilities.
+                    I am a{" "}
+                    <span className="font-semibold">Frontend Developer</span>{" "}
+                    specializing in AI agentic workflows and full product ownership.
+                    Backed by over 12 years of entrepreneurial leadership, I recently delivered a solo full-stack platform end-to-end at Makers Digital (Denmark - Bangkok Branch), owning the architecture, implementation, and documentation. I excel at designing structured AI agent workflows that enable faster development cycles while maintaining production-level code quality. Currently, I am seeking a frontend role in a structured engineering environment with clear collaboration and feedback loops.
                   </p>
                 </Fade>
                 <Fade
@@ -75,7 +65,7 @@ export default function About() {
                   damping={1e-1}
                   triggerOnce={true}
                 >
-                  <h3 className="mt-6 font-bold">My personality</h3>
+                  <h3 className="mt-6 font-bold">Beyond the code</h3>
                 </Fade>
                 <Fade
                   direction="up"
@@ -85,58 +75,30 @@ export default function About() {
                   triggerOnce={true}
                 >
                   <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
-                    Besides practicing coding skills, I commit myself to
-                    practice weight training 5 days a week over the last 11
-                    years. Sometimes I enjoy making videos and share my story on
-                    social media, and I used to gain huge audiences on Youtube.
-                    😄🎉
+                    Besides coding, I am dedicated to weight training 5 days a week, a commitment I've maintained for over 11 years. I also enjoy creating videos and sharing my stories on social media, having built a significant audience on YouTube in the past. 😄🎉
                   </p>
                 </Fade>
-
-                {/* <Fade
-                  direction="up"
-                  delay={800}
-                  cascade
-                  damping={1e-1}
-                  triggerOnce={true}
-                >
-                  <h3 className="mt-6 font-bold">My social media account</h3>
-                  <Fade
-                    direction="up"
-                    delay={1000}
-                    cascade
-                    damping={1e-1}
-                    triggerOnce={true}
-                  >
-                    <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/70">
-                      checkout hundred of vidoes i made on my instagram account
-                    </p>
-                  </Fade>
-                  <SocialLinks />
-                </Fade> */}
               </div>
             </div>
           </div>
-          <div className="">
+          <div className="w-full flex justify-center mt-6 xl:mt-0">
             <Fade
               direction="right"
               delay={600}
-              cascade
-              damping={1e-1}
               triggerOnce={true}
+              style={{ width: "100%" }}
             >
-              <iframe
-                className="mx-auto mt-10 min-h-48 w-full px-8 sm:max-h-[90vw] sm:min-h-[45vw] md:min-h-[28vw] md:max-w-[60vw] lg:min-h-[25vw] lg:max-w-[50vw] xl:min-h-[20vh] xl:max-w-[50vw] xl:px-3"
-                // width="560"
-                // height="315"
-                // src="https://www.youtube.com/embed/d4WIYn5Llm0?si=4uqKh2p888Zv2u7d"
-                src="https://www.youtube.com/embed/MB3KgRVxyiw?si=QW9FHaqTjvpJBYqm"
-                title="YouTube video player"
-                frameBorder="3"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-black/5 dark:border-white/10 bg-gray-100 dark:bg-gray-800">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/MB3KgRVxyiw?si=QW9FHaqTjvpJBYqm"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </Fade>
           </div>
         </div>
