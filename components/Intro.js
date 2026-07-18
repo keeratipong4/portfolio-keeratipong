@@ -97,7 +97,7 @@ function Intro() {
           </Link>
           <a
             className="group flex cursor-pointer items-center gap-2 text-nowrap rounded-full border border-slate-600 bg-white px-4 py-2 text-xs outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10 xs:px-7 xs:py-3 sm:text-sm"
-            href="/resume-Keeratipong.pdf"
+            href="/Keeratipong_Boonnapongkasem_Resume.pdf"
             download
           >
             Download CV

@@ -46,7 +46,7 @@ export default function SocialLinks() {
       name: "LinkedIn",
       icon: LinkedInLogo,
       color: "dark:bg-white/10",
-      url: "https://www.linkedin.com/in/keeratipong-boonnapongkasem-99259527b/",
+      url: "https://www.linkedin.com/in/keeratipong4",
     },
   ];
 
